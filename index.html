@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activity Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="app">
+  <header class="header">
+    <h1>Activity Tracker</h1>
+    <p id="progressText"></p>
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="input-group">
+      <input id="taskInput" type="text" placeholder="Add new activity..." />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="pending">Pending</button>
+      <button class="filter" data-filter="completed">Completed</button>
+    </div>
+  </section>
+
+  <section class="list-section">
+    <p id="emptyState" class="empty">No activities available</p>
+    <ul id="activityList"></ul>
+  </section>
+
+  <button id="resetBtn" class="reset">Reset All</button>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
